@@ -1,12 +1,12 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Baihan Chen**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
+- **chen.14045**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
+- **11/13**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
 
 ## Assignment Overview
 
-<!-- TODO: read the assignment overview then delete this comment -->
+
 
 The overall goal of the portfolio project is to have you design and implement
 your own OSU component. There are no limits to what you choose to design and
@@ -29,7 +29,7 @@ implement.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
+
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -52,7 +52,7 @@ to the tree diagram (you may remove this one as well):
 
 ## Assignment Learning Objectives
 
-<!-- TODO: read the assignment learning objectives then delete this comment -->
+
 
 Without learning objectives, there really is no clear reason why a particular
 assessment or activity exists. Therefore, to be completely transparent, here is
@@ -67,7 +67,7 @@ project. Specifically, students should be able to:
 
 ## Assignment Rubric: 10 Points
 
-<!-- TODO: read the assignment rubric then delete this comment -->
+
 
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
@@ -106,15 +106,11 @@ Below is further rationale/explanation for the rubric items above:
 > brainstorming. Plus it helps us get to know you better! Feel free to share
 > images in this section.
 
-<!-- TODO: briefly talk about your interests then delete this comment.
-Also, protip: you can preview what your response looks like by hitting
-the magnifying glass icon in the upper-right corner or pressing CTRL+K and
-then V. This kind of button combination is called a chord, for whatever
-reason -->
+I am interested in stocks, trading, and investing. I would like to use programming to organize trading information and calculate basic statistics. For this project, my goal is to build a small component that I can understand and finish during the semester.
 
 ## Assignment
 
-<!-- TODO: read the assignment section then delete this comment -->
+
 
 As previously stated, you are tasked with brainstorming 3 possible components.
 To aid you in this process, we have provided [some example components][example-components]
@@ -122,7 +118,7 @@ that may help you in your brainstorming. All of these components were made at
 some point by one of your peers, so you should feel confident that you can
 accomplish any of them.
 
-<!-- TODO: browse the list of possible projects then delete this comment -->
+
 
 There is no requirement that you use any of the components listed above.
 If you want to model something else, go for it! Very common early object
@@ -143,7 +139,7 @@ about different ways you might allow a client to manipulate your component.
 
 ### Example Component
 
-<!-- TODO: review this example component then delete this comment -->
+
 
 To help you brainstorm a few components, we've provided an example below of a
 component you already know well: NaturalNumber. We highly recommend that you
@@ -211,68 +207,98 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: <!-- TODO: give component a name then delete this comment -->
+- Component Design #1: `TradeJ`
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - Stores the profit or loss of each completed trade in entry order. Amounts are integer cents: positive for a profit, negative for a loss, and zero for a break-even trade. It provides simple statistics for reviewing results.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
-  - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
-  - **Additional Considerations** (*note*: "I don't know" is an acceptable
-    answer for each of the following questions):
-    - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
-      Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component need any enums or constants (e.g.,
-      `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Can you implement your secondary methods using your kernel methods?
-      Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+    - `void addTrade(int profitInCents)`: adds one result as the newest trade.
+    - `int removeLastTrade()`: removes and returns the newest result. Requires a nonempty
+    - `int length()`: reports the number of recorded trades.
 
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
-  - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
-  - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
-  - **Additional Considerations** (*note*: "I don't know" is an acceptable
-    answer for each of the following questions):
-    - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
-      Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component need any enums or constants (e.g.,
-      `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Can you implement your secondary methods using your kernel methods?
-      Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+    - `long totalProfit()`: reports the sum of all results in cents. Returns zero for an empty journal.
+    - `int winningTrades()`: counts results greater than zero.
+    - `double winRate()`: reports the percentage of trades with a positive result. Requires a nonempty journal; break-even trades still count in the total.
 
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
-  - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
-  - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
-  - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      Yes. Adding or removing a trade changes the journal.
+
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      No custom classes are needed. I could use an OSU `Stack<Integer>` as the private representation.
+
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - No enums are needed. A `PERCENT` constant with value `100.0` could be used for the win rate.
+
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes. For `totalProfit`, I can use `newInstance` to create a temporary journal, repeatedly remove the newest result, add it to the total, and put it in the temporary journal. Moving the results back restores their original order. `winningTrades` can use the same process, and `winRate` can use `winningTrades` and `length`. These queries preserve the journal.
+
+- Component Design #2: `StockWlist`
+  - **Description**:
+    -  Stores a collection of unique stock symbols, each with a target buying price in positive integer cents. For example, a symbol could have a target of `150`, meaning $150. A client can check whether a manually supplied current price is at or below that target.
+
+  - **Kernel Methods**:
+    - `void add(String symbol, int targetPriceInCents)`: adds a symbol and its target. Requires a nonempty symbol that is not already present and a positive target price.
+    - `int remove(String symbol)`: removes the symbol and returns its target price in cents. Requires the symbol to be present.
+    - `boolean hasStock(String symbol)`: reports whether the symbol is present.
+    - `int size()`: reports the number of symbols.
+
+  - **Secondary Methods**:
+      - `int targetPrice(String symbol)`: reports the target price in cents and preserves the watchlist. Requires the symbol to be present.
+      - `void updateTarget(String symbol, int newPriceInCents)`: changes an existing symbol's target. Requires a positive new price.
+      - `boolean isAtOrBelowTarget(String symbol, int currentPriceInCents)`: compares a positive current price with an existing symbol's target.
+
+  - **Additional Considerations** (*note*: "I don't know" is an acceptable
+    answer for each of the following questions):
+    - Would this component be mutable? Answer and explain:
+      Yes. Symbols can be added or removed, and targets can change.
+
+    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
+      Answer and explain:
+      I don't know
+
+    - Would this component need any enums or constants (e.g.,
+      `Program.Instruction`)? Answer and explain:
+      No enums or special constants are needed.
+
+    - Can you implement your secondary methods using your kernel methods?
+      Answer, explain, and give at least one example:
+      Yes. `targetPrice` can call `remove`, save the returned price, and call `add` with the same symbol and price before returning the price. `updateTarget` can remove the old entry and add the new one. `isAtOrBelowTarget` can compare the current price with `targetPrice`. None of these methods needs direct access to the map.
+
+- Component Design #3: `PriceHistory`
+  - **Description**:
+    - It stores an ordered sequence of positive stock prices in integer cents for one stock. Position zero is the oldest observation. Inserting and removing entries allows the client to maintain the history, and secondary methods provide basic summaries.
+
+  - **Kernel Methods**:
+    - `void addPrice(int position, int priceInCents)`: inserts a positive price at the given position. Requires `0 <= position <= length()`.
+    - `int removePrice(int position)`: removes and returns the price at the given position. Requires `0 <= position < length()`.
+    - `int length()`: reports the number of observations.
+
+  - **Secondary Methods**:
+      - `int priceAt(int position)`: reports the price in cents at a valid position and preserves the history.
+      - `int highestPrice()`: reports the highest recorded price in cents. Requires a nonempty history.
+      - `double averagePrice()`: reports the mean price in cents as a `double`. Requires a nonempty history.
+
+  - **Additional Considerations** (*note*: "I don't know" is an acceptable
+    answer for each of the following questions):
+    - Would this component be mutable? Answer and explain:
+      -  Yes. Inserting or removing prices changes the history.
+
+    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
+      Answer and explain:
+      No custom classes are needed. I could use an OSU `Sequence<Integer>` as the private representation.
+
+    - Would this component need any enums or constants (e.g.,
+      `Program.Instruction`)? Answer and explain:
+      No enums
+
+    - Can you implement your secondary methods using your kernel methods?
+      Answer, explain, and give at least one example:
+      Yes. `priceAt` can call `removePrice` and then `addPrice` at the same position to restore the entry. `highestPrice` can use a loop to compare values returned by `priceAt`. `averagePrice` can use a loop and a `long` sum, then divide by `length()` using double division. These operations preserve the values and their order.
 
 ## Post-Assignment
 
@@ -281,7 +307,6 @@ completed the assignment.
 
 ### Changelog
 
-<!-- TODO: create CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -320,7 +345,6 @@ of development.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
 
 If you have completed the assignment using this template, we recommend that
 you convert it to a PDF before submission. If you're not sure how, check out
@@ -330,7 +354,7 @@ all your work is there before submitting. For future assignments, you will
 just be submitting a link to a pull request. This will be the only time
 you have to submit any PDFs.
 
-<!-- TODO: upload a PDF of this document and the CHANGELOG to Carmen then delete this comment -->
+
 
 ### Peer Review
 
@@ -361,7 +385,7 @@ If you'd like to give feedback for this assignment (or any assignment, really),
 make use of [this survey][survey]. Your feedback helps make assignments
 better for future students.
 
-<!-- TODO: follow the link to share your feedback then delete this comment -->
+
 
 [example-components]: https://therenegadecoder.com/code/the-never-ending-list-of-small-programming-project-ideas/
 [markdown-to-pdf-guide]: https://therenegadecoder.com/blog/how-to-convert-markdown-to-a-pdf-3-quick-solutions/

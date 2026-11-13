@@ -6,6 +6,91 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
+
+## [2026.11.11]
+- Added 35 JUnit tests for kernel, Standard, secondary, and common methods.
+- Added checks for preservation of journal contents and entry order.
+- Added TradeSessionReport as a direct client of the component.
+- Added PracticeTradingAccount using TradeJ as part of its representation.
+- Added a project README with usage instructions and a test plan.
+- Added the final project reflection.
+## [2026.11.10]
+
+### Added
+
+- Implemented TradeJ1L using an OSU Stack<Integer>.
+- Added an empty constructor and the createNewRep helper method.
+- Implemented all kernel and Standard methods.
+- Documented the representation convention and correspondence.
+- Added the Part 5 representation choice and justification.
+- Implemented TradeJSecondary, which implements the TradeJ interface.
+- Implemented totalProfit, winningTrades, and winRate.
+- Implemented toString, equals, and hashCode.
+
+## [2026.11.9]
+
+### Added
+
+- Implemented TradeJSecondary, which implements the TradeJ interface.
+- Implemented totalProfit, winningTrades, and winRate.
+- Implemented toString, equals, and hashCode.
+- Added an assertion for the nonempty precondition of winRate.
+
+
+
+
+## [2026.11.8]
+
+### Added
+
+- Added TradeJKernel, extending Standard<TradeJ>.
+- Added the TradeJ enhanced interface, extending TradeJKernel.
+- Added JavaDoc comments and contracts for every interface method.
+- Added a hierarchy diagram for the component.
+- Implemented a proof of concept for TradeJ in one Java file.
+- Added methods to record and remove trade results.
+- Added methods to calculate total profit, winning trades, and win rate.
+- Added a main method demonstrating trade review and entry correction.
+- Added the Part 2 design justification and implementation summary.
+- Designed three components: TradeJ, StockWatchlist, and PriceHistory.
+- Described kernel and secondary methods for the three designs.
+
+
+## [2026.11.7]
+
+### Added
+
+- Designed three components: TradeJ, StockWatchlist, and PriceHistory.
+- Described kernel and secondary methods for all three designs.
+- Implemented a proof of concept for TradeJ in one Java file.
+- Added methods to add and remove trade results.
+- Added methods to calculate total profit, winning trades, and win rate.
+- Added a main method to demonstrate reviewing trades and correcting an entry.
+- Added the Part 2 design justification and implementation summary.
+## [2026.11.5]
+
+### Added
+
+- Make a new PR call "proof of concept"
+## [2026.11.5]
+
+### Added
+
+- Designed a PriceHistory component for storing stock prices and calculating basic summaries.
+
+## [2026.11.4]
+
+### Added
+
+- Designed a StockWlist component for storing stock symbols and target buying prices.
+
+
+## [2026.11.3]
+
+### Added
+
+- Designed a TradeJ component for recording trade results and calculating profit and win rate.
+
 ## [Unreleased]
 
 - Fixed an issue where the course URLs dropped the `web-sw1` paths

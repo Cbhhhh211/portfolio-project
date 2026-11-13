@@ -1,8 +1,8 @@
 # Portfolio Part 6: Finishing Touches
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) and delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) and delete this comment -->
-- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) and delete this comment -->
+- **Baihan Chen**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) and delete this comment -->
+- **chen.14045**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) and delete this comment -->
+- **11/13**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) and delete this comment -->
 
 ## Assignment Overview
 
@@ -50,7 +50,7 @@ course, but just knowing about them could set you up for long term success.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
+
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -141,7 +141,7 @@ to see them. If you don't like this workflow, you may try following the
 rebase strategies described [here](https://stackoverflow.com/questions/35790561/working-while-waiting-for-pending-pr)
 and [here](https://stackoverflow.com/questions/18021888/continue-working-on-a-git-branch-after-making-a-pull-request).
 
-<!-- TODO: make a new branch from main then delete this comment -->
+
 
 ## Assignment Tasks
 
@@ -307,18 +307,26 @@ Take some time to fill them out honestly.
 > complete the portfolio project, how much better (or worse) do you think you
 > understand software development and why?
 
-<!-- TODO: discuss -->
+This project helped me understand how the topics from class fit together
+in one component. In TradeJ, a client can ask for a win rate without
+knowing how the trade results are stored. That made interfaces, contracts,
+and layering feel more practical to me.
 
 > Also, did the portfolio project surface any gaps in your own knowledge of
 > software development. If so, what are those gaps and how did you address them?
 
-<!-- TODO: discuss -->
+The hardest part for me was separating kernel methods from secondary
+methods. For TradeJ, adding a result, removing the newest result, and
+checking the number of entries provide the basic operations.
 
 > Finally, as a part of completing the portfolio project, to what extent has
 > your perspective of software development changed, if at all? In other words,
 > is software development something you still enjoy? If not, why not?
 
-<!-- TODO: discuss -->
+I am more interested in software development after this project.
+Connecting the component to trading made the work more interesting to me.
+I also liked seeing how a small component could support different
+applications.
 
 > One of the challenges of completing the portfolio project is picking up a lot
 > of skills on your own. Some of these skills are, of course, software skills.
@@ -326,29 +334,48 @@ Take some time to fill them out honestly.
 > this process. Therefore, the first question is what skills did you pick up
 > through this process?
 
-<!-- TODO: discuss -->
+I got more practice with Java interfaces, inheritance, and component
+organization. I also learned more about method contracts and why query
+methods need to preserve the component's state. The testing work showed
+me why checking only a returned value is not enough. I still need to
+strengthen these skills, especially the division between kernel and
+secondary methods.
 
 > The follow-up question is: could you rephrase these skills you picked up
 > as bullet points that you could put on a resume? Try it below.
 
-<!-- TODO: discuss -->
+ Developed a Java trading journal component with kernel and enhanced
+  interfaces, an abstract secondary class, and a Stack-based implementation.
+ Added JUnit tests for kernel, Standard, secondary, and common methods,
+  including checks that queries preserve recorded data.
+ Created example applications for generating session reports and
+  managing a simulated trading account.
 
 > Next, how has working on this project affected your career trajectory?
 > In other words, do you now hate the topic you picked? Or, are you even more
 > interested in it? Both outcomes are valuable to your personal development.
 
-<!-- TODO: discuss -->
+The project increased my interest in software development and gave me
+a clearer short-term learning goal. I want to build a stronger foundation
+in Java and component design. Working on a topic related to trading also
+made it easier to see how programming could be useful for my own
+interests.
 
 > Finally, consider the skills you've picked up and your current career
 > trajectory. What are some things you could do to continue on your
 > career trajectory? Also, who are some mentors you could contact to help
 > you stay on your path?
 
-<!-- TODO: discuss -->
+I want to practice building more small Java components and deciding which
+methods belong in the kernel. I also want to get better at writing tests
+and explaining why a design follows its contracts. I could ask my CSE
+instructor, graders, or teaching assistants to review my method choices
+and point out mistakes. My next goal is to understand the structure well
+enough that I can explain and apply it more independently.
 
 ### Changelog
 
-<!-- TODO: update CHANGELOG then delete this comment -->
+
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -367,8 +394,8 @@ the following form: YYYY.0M.0D.
 
 ### Added
 
-- Designed test suite for <!-- insert name of component here --> component
-- Designed two different use cases for <!-- insert name of component here --> component
+- Designed test suite for TradeJ1LTest component
+- Designed two different use cases for TradeJ1L component
 
 ### Updated
 
@@ -384,7 +411,7 @@ request merge (or at least tag your commits). This is not required.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
+
 
 Assuming that your project is in a GitHub repo somewhere and your changes are on
 a proof-of-concept branch, then what we'll want you to do is create a pull
@@ -436,6 +463,6 @@ If you'd like to give feedback for this assignment (or any assignment, really),
 make use of [this survey][survey]. Your feedback helps make assignments
 better for future students.
 
-<!-- TODO: follow the link to share your feedback then delete this comment -->
+
 
 [survey]: https://forms.gle/dumXHo6A4Enucdkq9
